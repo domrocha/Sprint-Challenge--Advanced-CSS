@@ -1,1 +1,17 @@
 // Mixins Here
+.nav-align{
+    display: flex;
+    justify-content: space-around;
+    align-content: center; 
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+.img-setup{
+    border-radius: 20px;
+}
+
+.button(@bg-color, @fontsize){
+    background-color: @bg-color;
+    font-size: @fontsize;
+}
