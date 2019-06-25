@@ -1,15 +1,32 @@
 // Home Content
+@mobile:   ~"only screen and (min-width: 320px) and (max-width: 767px)";
 
 .home {
   
-  .intro {
+@media @mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+  .intro { 
     
+    img {
+      // border-radius: 10px;
+      .img-setup();
+      @media @mobile{
+        width: 100%;
+      }
+    }
+
     h2 {
       padding: 15px;
+      
+
     }
 
     p {
       padding:0 15px;
+      }
     }
   
   }
@@ -20,11 +37,22 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @mobile {
+      max-width: 100%; 
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+    }
+  }
+
+  .launch, .sky {
+    @media @mobile{
+      visibility: hidden;
     }
   }
 
@@ -47,6 +75,12 @@
     display: flex;
     justify-content: center;
 
+    @media @mobile{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
     .walk-text {
       width: 50%;
 
@@ -59,12 +93,9 @@
       }
 
       .btn {
-        border-radius: 4px;
-        color: white;
-        width: 45px;
-        height: 35px;
-        .button( black, 1.5em);
+
       }
+
     }
 
     .walk-img {
@@ -78,4 +109,4 @@
       }
     }
   }
-}// home
+// home
